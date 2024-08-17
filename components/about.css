@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #eff4fd;
+}
+.container .heading img{
+    height: 10%;
+    width: 10%;
+    /* align-items: flex-start; */
+    float: left;
+    margin-left: 120px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.container .heading h3{
+    padding-top: 3%;
+    color: #080607;
+    font-size: 40px;
+    padding-left: 25%;
+    float: left;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.container .heading a{
+    position: absolute;
+    text-decoration: none;
+    border: 2px solid #6f0f60;
+    font-size:15px;
+    color: rgb(9, 0, 8);
+    padding: 10px 12px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: 25%;
+}
+.wrapper{
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    width: 50%;
+    margin: 0px 25px;
+    transform: 0.4s ease;
+}
+.content :hover{
+    transform:translateY(-10px) ;
+}
+.content h6{
+    font-size: 25px;
+    color: rgb(223, 150, 72);
+    text-align: justify;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.content p{
+    color: rgba(78, 76, 75, 0.854);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 30px;
+    text-align: justify;
+}
+.content .btn{
+    position:relative;
+    margin-top: 40px;
+    text-decoration: none;
+    border: 2px solid #0a0009;
+    font-size:19px;
+    color: rgb(208, 94, 68);
+    padding: 13px 16px;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+.content .btn::before{
+    position: absolute;
+    content: "";
+    border: 1px solid transparent;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #d4803af2;
+    z-index: -1;
+    transition: transform 0.7s;
+    transform-origin: 0 0;
+    transition-timing-function:cubic-bezier(0.5,1.5,0.4,0.7) ;
+    transform: scaleX(0);
+}
+.content .btn:hover{
+    color:#fff;
+}
+.content .btn:hover::before{
+    transform: scaleX(1);
+}
+.image{
+    width: 50%;
+}
+.image:hover{
+    transform:translateY(-10px);
+}
+.image img{
+    padding-left: 2%;
+    width:100%;
+    height: auto;
+    border-radius: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

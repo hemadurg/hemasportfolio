@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    font-family: 'Montserrat',sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #eff4fd;
+    /* overflow: hidden; */
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    
+}
+nav ul li a:hover{
+    color:rgb(204, 116, 239);
+
+}
+
+.logo{
+    height: 11%;
+    width: 11%;
+}
+h4{
+    margin-top: 10px;
+    margin-left: 100px;
+    color: palevioletred;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+h1{
+    font-size: 50px;
+    color: black;
+    margin-left: 100PX;
+    margin-top: 20PX;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+.Container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+.box{
+    width: 250px;
+    height: 350px;
+    padding: 50px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(145deg,#e6e6e6,#ffffff);
+    box-shadow: 8px 8px 16px #d1d1d1,
+                -8px -8px 12px #e1dedf;
+    cursor: pointer; 
+    transition: 0.3s;           
+}
+.box:hover{
+    background: linear-gradient(145deg,#e66ba6,#600537);
+    box-shadow:  8px 8px 16px #ede9eb,
+    -8px -8px 16px #ffffff;
+}
+.icons{
+    font-size: 30px;
+    color: #400321;
+    margin-top: 10px;
+}
+.box:hover .icons{
+    margin-top: 0px;
+    color: #fff;
+}
+.box h2{
+    font-weight: 500;
+    margin-top: 25px;
+}
+.box:hover h2{
+    color: #fff;
+
+}
+.box p{
+    color: gray;
+    font-weight: 400;
+    margin-top: 25px;
+    
+}
+.box:hover p{
+    color:#fff;
+}
+.arrow{
+    font-size: 30px;
+    color: #9c044b;
+    margin-top: 40px;
+    display: none;
+}
+.box:hover .arrow{
+    color: #fff;
+    margin-top: 30px;
+    display: block;
+}
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
